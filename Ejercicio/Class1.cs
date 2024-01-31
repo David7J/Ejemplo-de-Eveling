@@ -1,47 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleApp1;
 
-namespace ConsoleApp2 { 
-
-public class Class1
+public class Cest
 {
-	public Class1()
-	{
-		private int[] cestudiantes = new int[40];
-
-	public Notas() {}
-
-	public Notas(int[] cestudiantes)
-{
-		Cestudiantes = cestudiantes;
-}
-	public void Est(int[] cestudiantes)
+    public static void Main(string[] args)
     {
-		this.Cestudiantes = cestudiantes;
-    }
+        Notas c = new Notas();
+        int[,]no = new int[40,5];
+        int cE, fila, col;
 
-    public int validar(String Mensaje)
-    {
-        int num = 0, v;
         do
         {
-            v = 1;
-            try
+            cE = c.validar("Digite la cantidad de estudiantes: ");
+
+        } while (cE <= 0 || cE > 40);
+
+        for(fila = 0; fila < cE; fila++)
+        {
+
+            do
             {
-                Console.Write(Mensaje);
-                num = Convert.ToInt32(Console.ReadLine());
+                no[fila,0] = c.validar("Nota del estudiante " + (fila + 1) + ":");
             }
-            catch (Exception error)
-            {
-                v = 0;
-                Console.WriteLine("No se aceptan letras", error.Message);
-            }
-        } while (v == 0);
-        return num;
+
+
+
+
+
+
+
+
+        }
+
+
+
     }
 
-  }
+
 }
+
+
